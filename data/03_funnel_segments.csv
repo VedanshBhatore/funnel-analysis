@@ -1,0 +1,169 @@
+segment_type,segment_value,step_order,step_name,sessions,pct_of_initial,step_conversion_pct,dropoff_pct,low_sample
+country,United States,1,session_start,155829,100.0,,,False
+country,United States,2,view_item,33110,21.25,21.25,78.75,False
+country,United States,3,add_to_cart,6615,4.25,19.98,80.02,False
+country,United States,4,begin_checkout,2630,1.69,39.76,60.24,False
+country,United States,5,add_shipping_info,2630,1.69,100.0,0.0,False
+country,United States,6,add_payment_info,1671,1.07,63.54,36.46,False
+country,United States,7,purchase,1254,0.8,75.04,24.96,False
+country,India,1,session_start,33250,100.0,,,False
+country,India,2,view_item,7076,21.28,21.28,78.72,False
+country,India,3,add_to_cart,1355,4.08,19.15,80.85,False
+country,India,4,begin_checkout,509,1.53,37.56,62.44,False
+country,India,5,add_shipping_info,509,1.53,100.0,0.0,False
+country,India,6,add_payment_info,341,1.03,66.99,33.01,False
+country,India,7,purchase,255,0.77,74.78,25.22,False
+country,Canada,1,session_start,26419,100.0,,,False
+country,Canada,2,view_item,5733,21.7,21.7,78.3,False
+country,Canada,3,add_to_cart,1163,4.4,20.29,79.71,False
+country,Canada,4,begin_checkout,482,1.82,41.44,58.56,False
+country,Canada,5,add_shipping_info,482,1.82,100.0,0.0,False
+country,Canada,6,add_payment_info,315,1.19,65.35,34.65,False
+country,Canada,7,purchase,229,0.87,72.7,27.3,False
+country,United Kingdom,1,session_start,11153,100.0,,,False
+country,United Kingdom,2,view_item,2351,21.08,21.08,78.92,False
+country,United Kingdom,3,add_to_cart,462,4.14,19.65,80.35,False
+country,United Kingdom,4,begin_checkout,182,1.63,39.39,60.61,False
+country,United Kingdom,5,add_shipping_info,182,1.63,100.0,0.0,False
+country,United Kingdom,6,add_payment_info,115,1.03,63.19,36.81,False
+country,United Kingdom,7,purchase,91,0.82,79.13,20.87,False
+country,France,1,session_start,7054,100.0,,,False
+country,France,2,view_item,1461,20.71,20.71,79.29,False
+country,France,3,add_to_cart,289,4.1,19.78,80.22,False
+country,France,4,begin_checkout,109,1.55,37.72,62.28,False
+country,France,5,add_shipping_info,109,1.55,100.0,0.0,False
+country,France,6,add_payment_info,76,1.08,69.72,30.28,False
+country,France,7,purchase,60,0.85,78.95,21.05,False
+country,Spain,1,session_start,6588,100.0,,,False
+country,Spain,2,view_item,1360,20.64,20.64,79.36,False
+country,Spain,3,add_to_cart,278,4.22,20.44,79.56,False
+country,Spain,4,begin_checkout,120,1.82,43.17,56.83,False
+country,Spain,5,add_shipping_info,120,1.82,100.0,0.0,False
+country,Spain,6,add_payment_info,77,1.17,64.17,35.83,False
+country,Spain,7,purchase,61,0.93,79.22,20.78,False
+country,Germany,1,session_start,6298,100.0,,,False
+country,Germany,2,view_item,1221,19.39,19.39,80.61,False
+country,Germany,3,add_to_cart,230,3.65,18.84,81.16,False
+country,Germany,4,begin_checkout,94,1.49,40.87,59.13,False
+country,Germany,5,add_shipping_info,94,1.49,100.0,0.0,False
+country,Germany,6,add_payment_info,66,1.05,70.21,29.79,False
+country,Germany,7,purchase,46,0.73,69.7,30.3,False
+country,China,1,session_start,6156,100.0,,,False
+country,China,2,view_item,1320,21.44,21.44,78.56,False
+country,China,3,add_to_cart,275,4.47,20.83,79.17,False
+country,China,4,begin_checkout,103,1.67,37.45,62.55,False
+country,China,5,add_shipping_info,103,1.67,100.0,0.0,False
+country,China,6,add_payment_info,60,0.97,58.25,41.75,False
+country,China,7,purchase,47,0.76,78.33,21.67,False
+country,Taiwan,1,session_start,5978,100.0,,,False
+country,Taiwan,2,view_item,1283,21.46,21.46,78.54,False
+country,Taiwan,3,add_to_cart,255,4.27,19.88,80.12,False
+country,Taiwan,4,begin_checkout,97,1.62,38.04,61.96,False
+country,Taiwan,5,add_shipping_info,97,1.62,100.0,0.0,False
+country,Taiwan,6,add_payment_info,65,1.09,67.01,32.99,False
+country,Taiwan,7,purchase,46,0.77,70.77,29.23,False
+country,Italy,1,session_start,4935,100.0,,,False
+country,Italy,2,view_item,1092,22.13,22.13,77.87,False
+country,Italy,3,add_to_cart,208,4.21,19.05,80.95,False
+country,Italy,4,begin_checkout,84,1.7,40.38,59.62,False
+country,Italy,5,add_shipping_info,84,1.7,100.0,0.0,False
+country,Italy,6,add_payment_info,43,0.87,51.19,48.81,False
+country,Italy,7,purchase,32,0.65,74.42,25.58,False
+device_category,desktop,1,session_start,205899,100.0,,,False
+device_category,desktop,2,view_item,43813,21.28,21.28,78.72,False
+device_category,desktop,3,add_to_cart,8619,4.19,19.67,80.33,False
+device_category,desktop,4,begin_checkout,3377,1.64,39.18,60.82,False
+device_category,desktop,5,add_shipping_info,3377,1.64,100.0,0.0,False
+device_category,desktop,6,add_payment_info,2172,1.05,64.32,35.68,False
+device_category,desktop,7,purchase,1592,0.77,73.3,26.7,False
+device_category,mobile,1,session_start,141079,100.0,,,False
+device_category,mobile,2,view_item,29799,21.12,21.12,78.88,False
+device_category,mobile,3,add_to_cart,5962,4.23,20.01,79.99,False
+device_category,mobile,4,begin_checkout,2362,1.67,39.62,60.38,False
+device_category,mobile,5,add_shipping_info,2362,1.67,100.0,0.0,False
+device_category,mobile,6,add_payment_info,1550,1.1,65.62,34.38,False
+device_category,mobile,7,purchase,1162,0.82,74.97,25.03,False
+device_category,tablet,1,session_start,7879,100.0,,,False
+device_category,tablet,2,view_item,1659,21.06,21.06,78.94,False
+device_category,tablet,3,add_to_cart,316,4.01,19.05,80.95,False
+device_category,tablet,4,begin_checkout,129,1.64,40.82,59.18,False
+device_category,tablet,5,add_shipping_info,129,1.64,100.0,0.0,False
+device_category,tablet,6,add_payment_info,88,1.12,68.22,31.78,False
+device_category,tablet,7,purchase,62,0.79,70.45,29.55,False
+traffic_medium,organic,1,session_start,121566,100.0,,,False
+traffic_medium,organic,2,view_item,25322,20.83,20.83,79.17,False
+traffic_medium,organic,3,add_to_cart,4667,3.84,18.43,81.57,False
+traffic_medium,organic,4,begin_checkout,1758,1.45,37.67,62.33,False
+traffic_medium,organic,5,add_shipping_info,1758,1.45,100.0,0.0,False
+traffic_medium,organic,6,add_payment_info,1088,0.89,61.89,38.11,False
+traffic_medium,organic,7,purchase,788,0.65,72.43,27.57,False
+traffic_medium,(none),1,session_start,82362,100.0,,,False
+traffic_medium,(none),2,view_item,17312,21.02,21.02,78.98,False
+traffic_medium,(none),3,add_to_cart,3444,4.18,19.89,80.11,False
+traffic_medium,(none),4,begin_checkout,1367,1.66,39.69,60.31,False
+traffic_medium,(none),5,add_shipping_info,1367,1.66,100.0,0.0,False
+traffic_medium,(none),6,add_payment_info,865,1.05,63.28,36.72,False
+traffic_medium,(none),7,purchase,639,0.78,73.87,26.13,False
+traffic_medium,referral,1,session_start,62156,100.0,,,False
+traffic_medium,referral,2,view_item,13641,21.95,21.95,78.05,False
+traffic_medium,referral,3,add_to_cart,2851,4.59,20.9,79.1,False
+traffic_medium,referral,4,begin_checkout,1148,1.85,40.27,59.73,False
+traffic_medium,referral,5,add_shipping_info,1148,1.85,100.0,0.0,False
+traffic_medium,referral,6,add_payment_info,801,1.29,69.77,30.23,False
+traffic_medium,referral,7,purchase,608,0.98,75.91,24.09,False
+traffic_medium,<Other>,1,session_start,51776,100.0,,,False
+traffic_medium,<Other>,2,view_item,10490,20.26,20.26,79.74,False
+traffic_medium,<Other>,3,add_to_cart,1969,3.8,18.77,81.23,False
+traffic_medium,<Other>,4,begin_checkout,755,1.46,38.34,61.66,False
+traffic_medium,<Other>,5,add_shipping_info,755,1.46,100.0,0.0,False
+traffic_medium,<Other>,6,add_payment_info,417,0.81,55.23,44.77,False
+traffic_medium,<Other>,7,purchase,299,0.58,71.7,28.3,False
+traffic_medium,(data deleted),1,session_start,21462,100.0,,,False
+traffic_medium,(data deleted),2,view_item,5364,24.99,24.99,75.01,False
+traffic_medium,(data deleted),3,add_to_cart,1408,6.56,26.25,73.75,False
+traffic_medium,(data deleted),4,begin_checkout,634,2.95,45.03,54.97,False
+traffic_medium,(data deleted),5,add_shipping_info,634,2.95,100.0,0.0,False
+traffic_medium,(data deleted),6,add_payment_info,518,2.41,81.7,18.3,False
+traffic_medium,(data deleted),7,purchase,390,1.82,75.29,24.71,False
+traffic_medium,cpc,1,session_start,15535,100.0,,,False
+traffic_medium,cpc,2,view_item,3142,20.23,20.23,79.77,False
+traffic_medium,cpc,3,add_to_cart,558,3.59,17.76,82.24,False
+traffic_medium,cpc,4,begin_checkout,206,1.33,36.92,63.08,False
+traffic_medium,cpc,5,add_shipping_info,206,1.33,100.0,0.0,False
+traffic_medium,cpc,6,add_payment_info,121,0.78,58.74,41.26,False
+traffic_medium,cpc,7,purchase,92,0.59,76.03,23.97,False
+traffic_source,google,1,session_start,127023,100.0,,,False
+traffic_source,google,2,view_item,26416,20.8,20.8,79.2,False
+traffic_source,google,3,add_to_cart,4835,3.81,18.3,81.7,False
+traffic_source,google,4,begin_checkout,1827,1.44,37.79,62.21,False
+traffic_source,google,5,add_shipping_info,1827,1.44,100.0,0.0,False
+traffic_source,google,6,add_payment_info,1129,0.89,61.8,38.2,False
+traffic_source,google,7,purchase,819,0.64,72.54,27.46,False
+traffic_source,<Other>,1,session_start,96339,100.0,,,False
+traffic_source,<Other>,2,view_item,19885,20.64,20.64,79.36,False
+traffic_source,<Other>,3,add_to_cart,3810,3.95,19.16,80.84,False
+traffic_source,<Other>,4,begin_checkout,1451,1.51,38.08,61.92,False
+traffic_source,<Other>,5,add_shipping_info,1451,1.51,100.0,0.0,False
+traffic_source,<Other>,6,add_payment_info,864,0.9,59.55,40.45,False
+traffic_source,<Other>,7,purchase,632,0.66,73.15,26.85,False
+traffic_source,(direct),1,session_start,82362,100.0,,,False
+traffic_source,(direct),2,view_item,17312,21.02,21.02,78.98,False
+traffic_source,(direct),3,add_to_cart,3444,4.18,19.89,80.11,False
+traffic_source,(direct),4,begin_checkout,1367,1.66,39.69,60.31,False
+traffic_source,(direct),5,add_shipping_info,1367,1.66,100.0,0.0,False
+traffic_source,(direct),6,add_payment_info,865,1.05,63.28,36.72,False
+traffic_source,(direct),7,purchase,639,0.78,73.87,26.13,False
+traffic_source,shop.googlemerchandisestore.com,1,session_start,28044,100.0,,,False
+traffic_source,shop.googlemerchandisestore.com,2,view_item,6383,22.76,22.76,77.24,False
+traffic_source,shop.googlemerchandisestore.com,3,add_to_cart,1420,5.06,22.25,77.75,False
+traffic_source,shop.googlemerchandisestore.com,4,begin_checkout,597,2.13,42.04,57.96,False
+traffic_source,shop.googlemerchandisestore.com,5,add_shipping_info,597,2.13,100.0,0.0,False
+traffic_source,shop.googlemerchandisestore.com,6,add_payment_info,441,1.57,73.87,26.13,False
+traffic_source,shop.googlemerchandisestore.com,7,purchase,342,1.22,77.55,22.45,False
+traffic_source,(data deleted),1,session_start,21089,100.0,,,False
+traffic_source,(data deleted),2,view_item,5275,25.01,25.01,74.99,False
+traffic_source,(data deleted),3,add_to_cart,1388,6.58,26.31,73.69,False
+traffic_source,(data deleted),4,begin_checkout,626,2.97,45.1,54.9,False
+traffic_source,(data deleted),5,add_shipping_info,626,2.97,100.0,0.0,False
+traffic_source,(data deleted),6,add_payment_info,511,2.42,81.63,18.37,False
+traffic_source,(data deleted),7,purchase,384,1.82,75.15,24.85,False

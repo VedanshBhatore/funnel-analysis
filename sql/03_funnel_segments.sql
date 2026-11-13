@@ -20,13 +20,13 @@ WITH session_base AS (
     ANY_VALUE(traffic_source.medium) AS traffic_medium,
     ANY_VALUE(traffic_source.source) AS traffic_source,
     ANY_VALUE(geo.country) AS country,
-    MAX(IF(event_name = 'session_start', 1, 0)) AS has_session_start,
-    MAX(IF(event_name = 'view_item', 1, 0)) AS has_view_item,
-    MAX(IF(event_name = 'add_to_cart', 1, 0)) AS has_add_to_cart,
-    MAX(IF(event_name = 'begin_checkout', 1, 0)) AS has_begin_checkout,
-    MAX(IF(event_name = 'add_shipping_info', 1, 0)) AS has_add_shipping_info,
-    MAX(IF(event_name = 'add_payment_info', 1, 0)) AS has_add_payment_info,
-    MAX(IF(event_name = 'purchase', 1, 0)) AS has_purchase
+    LOGICAL_OR(event_name = 'session_start') AS has_session_start,
+    LOGICAL_OR(event_name = 'view_item') AS has_view_item,
+    LOGICAL_OR(event_name = 'add_to_cart') AS has_add_to_cart,
+    LOGICAL_OR(event_name = 'begin_checkout') AS has_begin_checkout,
+    LOGICAL_OR(event_name = 'add_shipping_info') AS has_add_shipping_info,
+    LOGICAL_OR(event_name = 'add_payment_info') AS has_add_payment_info,
+    LOGICAL_OR(event_name = 'purchase') AS has_purchase
   FROM `bigquery-public-data.ga4_obfuscated_sample_ecommerce.events_*`
   WHERE _TABLE_SUFFIX BETWEEN '20201101' AND '20210131'
     AND (SELECT value.int_value FROM UNNEST(event_params) WHERE key = 'ga_session_id') IS NOT NULL
