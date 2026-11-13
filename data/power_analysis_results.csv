@@ -1,0 +1,4 @@
+name,baseline,target,effect_size,n_per_arm,total_n,daily_eligible,duration_days
+Exp 1: Simplify PDP add-to-cart CTA (site-wide),0.1979115462794436,0.2179115462794436,-0.04929651396310719,6460,12920,818.1630434782609,16
+Exp 2: Paid-search (cpc) landing-page relevance fix,0.17759388924252067,0.22759388924252066,-0.12461241583068683,1011,2022,34.15217391304348,60
+Exp 3: Shipping-cost transparency on weak categories (Accessories/Backpacks/Water Bottles),0.03790147681503666,0.05990147681503666,-0.10265056406980388,1490,2980,105.25,29
