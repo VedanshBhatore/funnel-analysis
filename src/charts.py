@@ -220,12 +220,41 @@ def chart_product_view_to_cart():
     plt.close(fig)
 
 
+def chart_time_patterns():
+    df = pd.read_csv(DATA / "06_time_patterns.csv")
+    day_order = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+    pivot = df.pivot(index="day_of_week", columns="hour_of_day_utc", values="conversion_rate_pct")
+    pivot = pivot.reindex(day_order)
+
+    fig, ax = plt.subplots(figsize=(13, 4.5))
+    im = ax.imshow(pivot.values, cmap=BLUE_CMAP, aspect="auto", vmin=0, vmax=np.nanmax(pivot.values))
+    ax.set_xticks(range(0, 24, 2))
+    ax.set_xticklabels([f"{h:02d}:00" for h in range(0, 24, 2)])
+    ax.set_yticks(range(len(day_order)))
+    ax.set_yticklabels(day_order)
+    ax.set_xlabel("Hour of day (UTC)")
+    for spine in ax.spines.values():
+        spine.set_visible(False)
+
+    cbar = fig.colorbar(im, ax=ax, fraction=0.025, pad=0.02)
+    cbar.set_label("Conversion rate (%)", color=INK_SECONDARY)
+    cbar.ax.tick_params(colors=INK_MUTED)
+
+    ax.set_title(
+        _wrap("Conversion rate by day/hour (UTC) shows no single dominant peak window", width=95),
+        fontsize=12.5, color=INK, loc="left", pad=14)
+    fig.tight_layout()
+    fig.savefig(CHARTS / "time_patterns_heatmap.png", dpi=150)
+    plt.close(fig)
+
+
 def main():
     chart_funnel()
     chart_funnel_by_segment()
     chart_cohort_heatmap()
     chart_daily_kpis()
     chart_product_view_to_cart()
+    chart_time_patterns()
     print(f"Wrote charts to {CHARTS}")
 
 
