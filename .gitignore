@@ -8,3 +8,4 @@ __pycache__/
 .DS_Store
 bq_credentials.json
 *.key.json
+.claude/
