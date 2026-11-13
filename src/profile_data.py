@@ -67,6 +67,40 @@ QUERIES = {
         ORDER BY n_item_rows DESC
         LIMIT 15
     """,
+    "item_identity_overlap": f"""
+        WITH v AS (
+          SELECT DISTINCT item.item_id FROM {TABLE}, UNNEST(items) AS item
+          WHERE event_name = 'view_item'
+        ),
+        c AS (
+          SELECT DISTINCT item.item_id FROM {TABLE}, UNNEST(items) AS item
+          WHERE event_name = 'add_to_cart'
+        ),
+        p AS (
+          SELECT DISTINCT item.item_id FROM {TABLE}, UNNEST(items) AS item
+          WHERE event_name = 'purchase'
+        )
+        SELECT
+          (SELECT COUNT(*) FROM v) AS distinct_viewed_items,
+          (SELECT COUNT(*) FROM c) AS distinct_carted_items,
+          (SELECT COUNT(*) FROM p) AS distinct_purchased_items,
+          (SELECT COUNT(*) FROM v JOIN c USING (item_id)) AS overlap_view_cart_items,
+          (SELECT COUNT(*) FROM v JOIN p USING (item_id)) AS overlap_view_purchase_items
+    """,
+    "category_identity_overlap": f"""
+        WITH vc AS (
+          SELECT DISTINCT item.item_category AS cat FROM {TABLE}, UNNEST(items) AS item
+          WHERE event_name IN ('view_item', 'add_to_cart')
+        ),
+        p AS (
+          SELECT DISTINCT item.item_category AS cat FROM {TABLE}, UNNEST(items) AS item
+          WHERE event_name = 'purchase'
+        )
+        SELECT
+          (SELECT COUNT(*) FROM vc) AS distinct_view_cart_categories,
+          (SELECT COUNT(*) FROM p) AS distinct_purchase_categories,
+          (SELECT COUNT(*) FROM vc JOIN p USING (cat)) AS overlap_categories
+    """,
 }
 
 
@@ -89,6 +123,8 @@ def write_markdown(results):
     geo = results["country_quirks"]
     traf = results["traffic_source_quirks"]
     itc = results["item_category_quirks"]
+    iio = results["item_identity_overlap"].iloc[0]
+    cio = results["category_identity_overlap"].iloc[0]
 
     lines = []
     lines.append("# Data Profile: GA4 Obfuscated Sample E-commerce Dataset")
@@ -165,6 +201,22 @@ def write_markdown(results):
         "- `purchase` events are de-duplicated by `ecommerce.transaction_id` before computing "
         "revenue/orders/AOV, since the same transaction can fire more than one `purchase` "
         "event in GA4 (e.g. a confirmation-page reload)."
+    )
+    lines.append(
+        f"- **`item_id`/`item_category` are not consistent between pre-purchase and purchase "
+        f"events in this sample.** `view_item` and `add_to_cart` agree with each other "
+        f"({int(iio['overlap_view_cart_items']):,} of {int(iio['distinct_viewed_items']):,} "
+        f"distinct viewed `item_id`s also appear on `add_to_cart`), but only "
+        f"{int(iio['overlap_view_purchase_items']):,} of those {int(iio['distinct_viewed_items']):,} "
+        f"viewed `item_id`s, and only {int(cio['overlap_categories']):,} of "
+        f"{int(cio['distinct_view_cart_categories']):,} view/cart `item_category` values, ever "
+        f"appear on a `purchase` line item ({int(iio['distinct_purchased_items']):,} distinct "
+        f"purchased `item_id`s exist, in a largely different value space). This looks like an "
+        f"artifact of how Google obfuscated/re-keyed this particular public sample rather than "
+        f"real GA4 behavior. Consequence: `sql/05_product_funnel.sql` reports view-to-cart rate "
+        f"by category/item (consistent taxonomy) and top purchased categories by revenue "
+        f"(purchase events' own, different taxonomy) as **separate** results instead of chaining "
+        f"them into one view→cart→purchase rate per item."
     )
     lines.append("")
 
